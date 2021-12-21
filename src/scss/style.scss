@@ -1,0 +1,464 @@
+$main-color: #0a0c18;
+$red: #ff3c3c;
+$light: #ffff;
+$blue: #14182f;
+@mixin center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Montserrat", sans-serif;
+}
+header {
+  position: sticky;
+  top: 0;
+  background-color: #0a0c18;
+  .wrappers {
+    background: $main-color;
+    max-width: 1400px;
+    margin: auto;
+    padding: 2rem 0;
+    @include center();
+    justify-content: space-between;
+
+    .logo {
+      display: flex;
+
+      p {
+        color: $light;
+        margin-right: 10px;
+        font-size: 1.5rem;
+      }
+
+      p:last-child {
+        color: $red;
+      }
+    }
+    .nav-bar {
+      @include center;
+
+      a {
+        color: $light;
+        border-bottom: 2px solid transparent;
+        margin-right: 2rem;
+
+        &:last-child {
+          margin-right: 0;
+          color: $red;
+        }
+
+        &:hover {
+          border-bottom: 2px solid blue;
+        }
+      }
+    }
+  }
+
+  .burger {
+    display: none;
+    width: 30px;
+  }
+}
+.Container {
+  padding: 9rem 0;
+  // height: 80vh;
+  background: url("../images/Vector.svg");
+  background-position: center;
+  background-repeat: repeat-x;
+  @include center();
+  color: $light;
+
+  .ContainerPart {
+    width: 1300px;
+    @include center();
+    justify-content: space-between;
+
+    .ContainerPart1 {
+      p {
+        margin-top: 1rem;
+        &:first-child {
+          font-size: 50px;
+        }
+        &:nth-child(2) {
+          font-size: 50px;
+        }
+      }
+      .joint {
+        @include center();
+        justify-content: left;
+        margin-top: 2.5rem;
+
+        button {
+          padding: 1rem 1.5rem;
+          background-color: $red;
+          margin-right: 0.6rem;
+          cursor: pointer;
+          border: 0;
+          font-size: 14px;
+          border-radius: 5px;
+          font-weight: bold;
+          border: 1px solid $red;
+          color: #14182f;
+
+          &.secondary-button {
+            background-color: transparent !important;
+            color: $light;
+            font-weight: normal;
+            margin-left: 0.5rem;
+            border: 1px solid transparent;
+            transition: 0.3s ease;
+
+            &:hover {
+              border: 1px solid $light;
+            }
+          }
+        }
+      }
+    }
+    img {
+      width: 30%;
+      height: 30%;
+    }
+  }
+}
+
+.firstPart {
+  max-width: 1300px;
+  margin: auto;
+  color: $light;
+
+  p {
+    &:first-child {
+      font-size: 30px;
+      @include center();
+    }
+  }
+  .firstPart1 {
+    @include center();
+    margin-top: 4rem;
+
+    img {
+      width: 35%;
+      height: 35%;
+    }
+    .textPart1 {
+      margin-left: 5.5rem;
+      p {
+        // width: 100%;
+        margin-top: 1.5rem;
+        font-size: 17px;
+        line-height: 1.2rem;
+      }
+    }
+  }
+}
+.firstPart2 {
+  @include center();
+  margin-top: 7rem;
+  .textPart2 {
+    font-size: 17px;
+    line-height: 1rem;
+    margin-right: 5.5rem;
+
+    p {
+      justify-content: left;
+      margin-top: 1.5rem;
+      line-height: 1.2rem;
+    }
+    img {
+      width: 20%;
+      height: 20%;
+    }
+  }
+}
+.firstPart3 {
+  @include center();
+  margin-top: 7rem;
+
+  img {
+    width: 30%;
+    height: 30%;
+  }
+  .textPart3 {
+    margin-left: 5.5rem;
+    p {
+      margin-top: 1.5rem;
+    }
+  }
+}
+footer {
+  // height: 40vh;
+  margin-top: 3rem;
+  background: $blue;
+  .footerPart {
+    max-width: 1300px;
+    padding: 3rem 0;
+    margin: auto;
+    color: $light;
+
+    display: flex;
+    justify-content: space-between;
+    .part1 {
+      .logo-part11 {
+        @include center();
+        justify-content: left;
+        p {
+          font-size: 25px;
+          &:last-child {
+            color: $red;
+            margin-left: 0.5rem;
+          }
+        }
+      }
+      .part1-text {
+        .icon-text {
+          margin: 1rem 0rem;
+          @include center();
+          justify-content: left;
+
+          img {
+            width: 20px;
+            height: 15px;
+            margin-right: 0.5rem;
+          }
+        }
+      }
+      p {
+        font-size: 15px;
+      }
+    }
+    .part2 {
+      p {
+        font-size: 25px;
+      }
+      .footer-list {
+        font-size: 15px;
+
+        ul a li {
+          margin-top: 0.8rem;
+          color: $light;
+        }
+      }
+    }
+    .part3 {
+      line-height: 2.7rem;
+      p {
+        &:first-child {
+          font-size: 30px;
+        }
+      }
+    }
+    .part4 {
+      @include center();
+      button {
+        padding: 1rem 1.3rem;
+        background-color: $red;
+        border: 0;
+        cursor: pointer;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1432px) {
+  header {
+    .wrappers {
+      margin: 0 1rem;
+    }
+  }
+  .Container {
+    .ContainerPart {
+      margin: 0 3rem;
+    }
+  }
+  .firstPart {
+    margin: 0 3rem;
+  }
+  footer {
+    .footerPart {
+      margin: 0 1rem;
+    }
+  }
+}
+
+@media screen and (max-width: 1010px) {
+  .Container {
+    background: #14182f;
+    margin-bottom: 3rem;
+    padding: 4rem 0;
+    // padding-top: 9rem;
+    .ContainerPart {
+      // height: 150vh;
+      @include center();
+      flex-direction: column-reverse;
+      svg {
+        width: 60%;
+        height: 60%;
+      }
+      .ContainerPart1 {
+        @include center();
+        flex-direction: column;
+
+        p {
+          &:first-child {
+            font-size: 35px;
+          }
+          &:nth-child(2) {
+            font-size: 35px;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 975px) {
+  header {
+    // padding: 1.5rem 2rem;
+    .nav-bar {
+      nav {
+        display: none;
+      }
+      .burger {
+        display: block;
+      }
+    }
+  }
+  .Container {
+    padding: 2rem;
+  }
+  .firstPart {
+    p {
+      margin-top: 3rem;
+    }
+  }
+  footer {
+    .footerPart {
+      .part2 {
+        display: none;
+      }
+      .part3 {
+        display: none;
+      }
+    }
+  }
+}
+@media screen and (max-width: 820px) {
+  .firstPart {
+    @include center();
+    flex-direction: column;
+    p {
+      &:first-child {
+        margin: 0;
+      }
+    }
+    .firstPart1 {
+      @include center();
+      flex-direction: column;
+
+      .textPart1 {
+        margin-top: 2rem;
+        margin-left: 0;
+        text-align: center;
+      }
+      img {
+        width: 60%;
+        height: 60%;
+        margin: 0;
+      }
+    }
+    .firstPart2 {
+      @include center();
+      flex-direction: column-reverse;
+      .textPart2 {
+        margin-top: 2rem;
+        margin-right: 0;
+        text-align: center;
+      }
+      img {
+        width: 60%;
+        height: 60%;
+      }
+    }
+    .firstPart3 {
+      @include center();
+      flex-direction: column;
+      .textPart3 {
+        margin-top: 2rem;
+        margin-left: 0;
+        text-align: center;
+      }
+      img {
+        width: 60%;
+        height: 60%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .Container {
+    .ContainerPart {
+      margin: 0;
+      .ContainerPart1 {
+        text-align: center;
+        // margin: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 475px) {
+  .Container {
+    margin: 0;
+    .ContainerPart {
+      margin: 0;
+      .ContainerPart1 {
+      }
+    }
+  }
+  footer {
+    .footerPart {
+      margin: 0 1rem;
+    }
+  }
+}
+@media screen and (max-width: 420px) {
+  footer {
+    .footerPart {
+      flex-direction: column;
+      align-items: center;
+
+      p {
+        &:nth-child(4) {
+          display: none;
+        }
+      }
+      .part1 {
+        font-size: 10px;
+        margin-right: 1rem;
+        align-items: center;
+
+        .logo-part11 {
+          &::before {
+            content: "Invite";
+            font-size: 1.5rem;
+            margin-right: 0.5rem;
+          }
+        }
+
+        .part1-text {
+          display: none;
+        }
+      }
+      button {
+        margin-top: 1rem;
+      }
+    }
+  }
+}
